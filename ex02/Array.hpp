@@ -1,36 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Iter.hpp                                           :+:      :+:    :+:   */
+/*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/21 21:14:26 by spitul            #+#    #+#             */
-/*   Updated: 2025/07/26 21:46:24 by spitul           ###   ########.fr       */
+/*   Created: 2025/07/26 22:11:46 by spitul            #+#    #+#             */
+/*   Updated: 2025/07/26 22:30:01 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ITER_HPP
-#define ITER_HPP
-
-#include <cstddef>
-
-template<typename T, typename F>
-void	iter(T *arr, size_t size, F f)
-{
-	if (arr == NULL)
-		return;
-	for (size_t i = 0; i < size; i++)
-		f(arr[i]);
-}
-
-template<typename T, typename F>
-void	iter(const T *arr, size_t size, F f)
-{
-	if (!arr)
-		return;
-	for (int i = 0; i < size; i++)
-		f(arr[i]);
-}
+#ifndef ARRAY_HPP
+#define ARRAY_HPP
 
 #endif

@@ -6,7 +6,7 @@
 #    By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/13 17:47:50 by spitul            #+#    #+#              #
-#    Updated: 2025/07/26 22:29:25 by spitul           ###   ########.fr        #
+#    Updated: 2025/08/20 21:10:16 by spitul           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ SRC = main.cpp
 OBJ = $(addprefix obj/, $(SRC:.cpp=.o))
 CC = c++
 CPPFLAGS = -g -Wall -Wextra -Werror -std=c++98 -pedantic
-HEADERS = Array.hpp
+HEADERS = Array.hpp Array.tpp
 
 NAME = array
 

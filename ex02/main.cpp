@@ -6,7 +6,21 @@
 /*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 22:15:52 by spitul            #+#    #+#             */
-/*   Updated: 2025/07/26 22:15:53 by spitul           ###   ########.fr       */
+/*   Updated: 2025/08/20 21:46:50 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Array.hpp"
+
+int	main(void)
+{
+	size_t	n;
+
+	n = 7;
+	Array<int> arr(n);
+	for (size_t i = 0; i < n; i++)
+		arr[i] = i + 1;
+	
+	std::cout << arr;
+	return 0;
+}

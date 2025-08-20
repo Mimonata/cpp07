@@ -6,12 +6,16 @@
 /*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 22:11:46 by spitul            #+#    #+#             */
-/*   Updated: 2025/08/19 21:39:21 by spitul           ###   ########.fr       */
+/*   Updated: 2025/08/20 21:36:59 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ARRAY_HPP
 #define ARRAY_HPP
+
+#include <cstddef>
+#include <ostream>
+#include <exception>
 
 template<typename T>
 
@@ -19,7 +23,7 @@ class Array
 {
 	private:
 		T		*arr;
-		size_t	size;
+		size_t	_size;
 
 	public:
 		Array();
@@ -32,14 +36,15 @@ class Array
 		const T& operator[](size_t index) const;
 		size_t	size() const;
 
-		class ExceptionOutOfRange()	: public std::exception
+		class ExceptionOutOfRange	: public std::exception
 		{
 			public:
 				virtual const char	*what() const throw();
 		};
-	
-	
 };
+
+template<typename T>
+std::ostream& operator<<(std::ostream &os, const Array<T> &arr); 
 
 #include "Array.tpp"
 

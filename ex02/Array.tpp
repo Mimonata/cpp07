@@ -6,7 +6,7 @@
 /*   By: spitul <spitul@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/17 21:53:43 by spitul            #+#    #+#             */
-/*   Updated: 2025/08/20 21:47:54 by spitul           ###   ########.fr       */
+/*   Updated: 2025/08/21 06:17:44 by spitul           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,11 +91,7 @@ std::ostream& operator<<(std::ostream &os, const Array<T> &src)
 {
 	for (size_t i = 0; i < src.size(); i++)
 	{
-		os << "[" << i << "] = ";
-		if (src[i])
-			os << src[i] << std::endl;
-		else
-			os << "NULL" << std::endl;
+		os << "[" << i << "] = " << src[i] << std::endl;
 	}
 	return os;
 }
